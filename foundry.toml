@@ -1,0 +1,15 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+fs_permissions = [{ access = "read-write", path = "./"}]
+bytecode_hash = "none" # to get deterministic deployed code
+
+# GAS
+gas_price = 110_000
+gas_limit = 200_000_000
+block_gas_limit = 10_000_000_000
+
+[rpc_endpoints]
+fevm = "${CALIBRATIONNET_RPC_URL}"
+local = "http://127.0.0.1:8545"
