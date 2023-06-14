@@ -1,0 +1,12 @@
+@forge/=lib/forge-std/src/
+
+@fevm/=lib/fevm-foundry-kit/src/
+
+@filecoin/=lib/filecoin-solidity/
+@cborutils/=lib/filecoin-solidity/lib/solidity-cborutils/
+@bignumberbers/=lib/filecoin-solidity/lib/solidity-bignumber/
+
+@erc6551/=lib/erc6551-reference/
+
+@openzeppelin/=lib/openzeppelin-contracts/contracts/
+openzeppelin-contracts/=lib/erc6551-reference/lib/openzeppelin-contracts/contracts/
