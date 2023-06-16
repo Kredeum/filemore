@@ -16,3 +16,9 @@
 [submodule "lib/filecoin-solidity"]
 	path = lib/filecoin-solidity
 	url = https://github.com/zondax/filecoin-solidity
+[submodule "lib/ens-contracts"]
+	path = lib/ens-contracts
+	url = https://github.com/ensdomains/ens-contracts
+[submodule "lib/buffer"]
+	path = lib/buffer
+	url = https://github.com/ensdomains/buffer

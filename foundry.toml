@@ -3,8 +3,11 @@ src = 'src'
 out = 'out'
 libs = ['lib']
 fs_permissions = [{ access = "read-write", path = "./" }]
-bytecode_hash = "none"                                    # to get deterministic deployed code
+
+# SOLC
 solc = "0.8.17"
+bytecode_hash = "none"             # to get deterministic deployed code
+extra_output = ["metadata", "bin"]
 
 # GAS
 gas_price = 110_000

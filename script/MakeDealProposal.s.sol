@@ -33,13 +33,7 @@ contract MyScript is Script, DeployLite {
         });
 
         vm.startBroadcast(deployer);
-
         bytes32 dealId = DealClient(deal_client).makeDealProposal(dealRequest);
-
-        // Use the following to get your deal proposal from dealID
-        // uint256 dealID = vm.envUint("DEAL_ID");
-        // DealClient(deal_client.getDealProposal(dealID));
-
         vm.stopBroadcast();
 
         console.logBytes32(dealId);

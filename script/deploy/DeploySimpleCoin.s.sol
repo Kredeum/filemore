@@ -8,7 +8,7 @@ import {SimpleCoin} from "@fevm/basic-solidity-examples/SimpleCoin.sol";
 
 contract DeploySimpleCoin is DeployLite {
     function deploySimpleCoin() public returns (address simpleCoin) {
-        vm.startBroadcast();
+        vm.startBroadcast(vm.envAddress("ETH_FROM"));
 
         simpleCoin = address(new SimpleCoin());
 
