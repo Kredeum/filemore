@@ -10,6 +10,10 @@ contract MyScript is Script, DeployLite {
         address deployer = vm.envAddress("ETH_FROM");
         address deal_client = readAddress("DealClient");
 
+        // Use the following to get your deal proposal from dealID
+        // bytes32 dealId = vm.envBytes32("DEAL_ID");
+        // console.logBytes32(dealId);
+
         ExtraParamsV1 memory extraParamsV1 = ExtraParamsV1({
             location_ref: vm.envString("LOCATION_REF"),
             car_size: uint64(vm.envUint("CAR_SIZE")),
@@ -36,12 +40,11 @@ contract MyScript is Script, DeployLite {
 
         bytes32 dealId = DealClient(deal_client).makeDealProposal(dealRequest);
 
-        // Use the following to get your deal proposal from dealID
-        // uint256 dealID = vm.envUint("DEAL_ID");
-        // DealClient(deal_client.getDealProposal(dealID));
+        bytes memory byts = DealClient(deal_client).getDealProposal(dealId);
 
         vm.stopBroadcast();
 
         console.logBytes32(dealId);
+        console.logBytes(byts);
     }
 }
