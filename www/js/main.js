@@ -42,4 +42,4 @@ window.addEventListener("load", async (event) => {
   document.getElementById("nft__img").src = nftMetadatas.image;
 });
 
-main().catch(console.error);
+// main().catch(console.error);
