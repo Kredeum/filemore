@@ -33,13 +33,28 @@ const metadataGet = async () => {
   return jsonData;
 };
 
-metadataGet();
+const fileMore = async (event) => {
+  const buttunSpiner = event.target..getElementById("button__spiner");
+  // TODO laucnch spinner
+  // TODO check deal
+  // TODO get response
+  // TODO change archive ending date
+  // TODO hide spinner
+} 
 
 window.addEventListener("load", async (event) => {
+  const nftTitle = document.getElementById("nft__title");
+  const nftImage = document.getElementById("nft__img");
+  const button = document.getElementById("button");
+  
+  
   const nftMetadatas = await metadataGet();
 
   console.log("window.addEventListener ~ nftMetadatas.image:", nftMetadatas);
-  document.getElementById("nft__img").src = nftMetadatas.image;
+  nftTitle.textContent = nftMetadatas.name;
+  nftImage.src = nftMetadatas.image;
+  
+  button.addEventListener("click", fileMore)
 });
 
 // main().catch(console.error);
